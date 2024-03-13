@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intrac Invoicing</title>
+  <link rel="stylesheet" href="dashboard1.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav>
+            <div class="top">
+                <div class="logo">
+                    <img src="/company-logo.png" alt="">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-symbols-sharp">
+                        receipt_long
+                        </span>
+                    <h3>Billing</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        import_contacts
+                        </span>
+                    <h3>Contacts</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        add_circle
+                        </span>
+                    <h3>Create Invoices</h3>
+                </a>
+            
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        text_snippet
+                        </span>
+                    <h3>Logs</h3>
+                </a>
+               
+
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        merge_type
+                        </span>
+                    <h3>Merge</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        calendar_month
+                        </span>
+                    <h3>Monthly Payments</h3>
+                </a>
+                
+               
+                
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        person_add
+                        </span>
+                    <h3>New Client</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        tune
+                        </span>
+                    <h3>Operations</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        payments
+                        </span>
+                    <h3>Quarterly Payments</h3>
+                </a>
+               
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        forward_to_inbox
+                        </span>
+                    <h3>Reminders</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        manage_accounts
+                        </span>
+                    <h3>Scripts</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        sms
+                        </span>
+                    <h3>SMS</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        credit_card
+                        </span>
+                    <h3>Tyro</h3>
+                </a>
+                
+                <div class="bottom">
+                <div>Logged in as <b>Jack</b></div>    
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        password
+                        </span>
+                    <h3>Change Password</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        logout
+                        </span>
+                    <h3>Logout</h3> 
+                </a>
+                </div>
+            </div>
+        </nav>
+        <!-- End of Navbar -->
+        <main>
+            <h1> Dashboard</h1>
+            <div class="insights">
+                <div class="outstanding">
+                    <span class="material-symbols-sharp">
+                        analytics
+                     </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Outstanding</h3>
+                            <h1>$84,106.90</h1>
+                        </div>
+                    </div>
+                    <small class="text-muted">111 Invoices</small>
+                </div>
+                <!-- End of Total Outstanding-->
+                <div class="overdue">
+                    <span class="material-symbols-sharp">
+                        alarm
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Overdue</h3>
+                            <h1>$25,660.45</h1>
+                        </div>
+                    </div>
+                    <small class="text-muted">41 Invoices</small>
+                </div>
+                <!-- End of Total Overdue-->
+                <div class="revenue">
+                    <span class="material-symbols-sharp">
+                        currency_exchange
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Monthly Revenue</h3>
+                            <h1>$48,528.98</h1>
+                        </div>
+                    </div>
+                    <small class="text-muted">March 2024</small>
+                </div>
+                <!-- End of Total Monthly Revenue-->
+            </div>
+            <!-- End of Insights-->
+            <div class="current-invoices">
+                <div class="top">
+                    <div><h2>Current Invoices</h2></div>
+                    <div><form>
+                        <div class="search">
+                            <span class="search-icon material-symbols-sharp">search</span>
+                            <input type="search" class="search-input" placeholder="Search">
+                        </div>
+
+                    </form></div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Inv #</th>
+                            <th>Client Name</th>
+                            <th>Created</th>
+                            <th>Due</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12847</td>
+                            <td>YoungGun Cricket</td>
+                            <td>March 1st 2024</td>
+                            <td>March 15th 2024</td>
+                            <td>$3,415.24</td>
+                            <td>pending</td>
+                            <td><a href="#" class="primary">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>12845</td>
+                            <td>WMG Football Club Ltd</td>
+                            <td>March 1st 2024</td>
+                            <td>March 15th 2024</td>
+                            <td>$110.17</td>
+                            <td>pending</td>
+                            <td><a href="#" class="primary">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>12810</td>
+                            <td>Parklands Sports Centre</td>
+                            <td>March 1st 2024</td>
+                            <td>March 15th 2024</td>
+                            <td>$2,825.11</td>
+                            <td>pending</td>
+                            <td><a href="#" class="primary">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>12717</td>
+                            <td>Active8Kids</td>
+                            <td>March 1st 2024</td>
+                            <td>March 15th 2024</td>
+                            <td>$385.37</td>
+                            <td>pending</td>
+                            <td><a href="#" class="primary">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>12717</td>
+                            <td>Active8Kids</td>
+                            <td>March 1st 2024</td>
+                            <td>March 15th 2024</td>
+                            <td>$385.37</td>
+                            <td>pending</td>
+                            <td><a href="#" class="primary">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>12717</td>
+                            <td>Active8Kids</td>
+                            <td>March 1st 2024</td>
+                            <td>March 15th 2024</td>
+                            <td>$385.37</td>
+                            <td>pending</td>
+                            <td><a href="#" class="primary">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>12717</td>
+                            <td>Active8Kids</td>
+                            <td>March 1st 2024</td>
+                            <td>March 15th 2024</td>
+                            <td>$385.37</td>
+                            <td>pending</td>
+                            <td><a href="#" class="primary">Details</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+        </main>
+        <!-- End of Main-->
+        <div class="right">
+            <!-- End of Top-->
+            <div class="current-clients">
+                <div class="top">
+                <h2>Clients</h2>
+                <div><form>
+                    <div class="search">
+                        <span class="search-icon material-symbols-sharp">search</span>
+                        <input type="search" class="search-input" placeholder="Search">
+                    </div>
+                </div>
+
+                </form></div>
+                <ul class="clients">
+  
+                        <a href="javascript:pop('client.cfm?client=5s')">
+                            <div class="client-code">5s</div>
+                            <div class="client-name">5sports</div></a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=ak')"><div class="client-code">ak</div>
+                            <div class="client-name">Active8Kids</div></a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=arc')"><div class="client-code">arc</div>
+                            <div class="client-name">ARC @ UNSW</div></a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=ah')">Ascham School Ltd</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=bf')">Blue Fin Swim School</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=brf')">Brisbane Roar Football Club</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=bi')">Broadbeach Inverloch Health Club</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=cc')">Camperdown Tennis</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=cb')">Careel Bay Tennis Club</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=cp')">Centennial Parklands - ES Marks</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=cm')">Centennial Parklands - MP Field</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=ce')">Coastal Environment Centre</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=cd')">Coogee Diggers</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=bb')">CrocStars Swim School</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=ca')">Cronulla Surfing Academy</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=dd')">Duck and Dive</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=eg')">East Gymnastics</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=esh')">Eastern Suburbs Hockey Club</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=em')">Einsteinz Music</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=en')">ESCPSNA</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=fy')">Flying Yogis</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=gof')">Football Victoria</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=gos')">Go Sports</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=got')">Go Tennis</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=gb')">Golden Goal Bankstown</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=mv')">Goodwins Tennis Academy</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=gz')">Gymkidz</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=ho')">H2O Swimming Works</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=hh')">Hunters Hill Club</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=im')">Immanuel Lutheran College</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=sg')">Inspire Tennis</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=je')">Jensen's Tennis Centre</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=ki')">Kickeroos</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=kc')">Kincoppal - Rose Bay</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=kbf')">Kory Babington Football Academy</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=lh')">Langham Hotels</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=lv')">Learn to Swim Victoria</a>
+                        
+                      
+                        <a href="javascript:pop('client.cfm?client=la')">Lennox Aquatic</a>
+                        <td>
+    
+  
+                            <a href="javascript:pop('client.cfm?client=li')">Little Alfred Tennis Centre</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=lm')">Little Monsters Swim School</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=ld')">Love'n Deuce</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=lp')">Lyne Park Tennis Centre</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=ms')">Manly Surf School</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=mg')">Melbourne Golf Coaching</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=mj')">Mojosurf</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=me')">Mojosurf Europe</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=mi')">Mojosurf Indonesia</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=mp')">Moore Park Golf</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=mb')">Music Bus</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=nb')">Neutral Bay Club</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=nmc')">North Midlands Council</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=pi')">Northern Beaches Council</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=og')">Oceanic Gymnastics Centre</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=pl')">Parklands Sports Centre</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=pe')">Penrith City Council</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=pfc')">Per4orm Cricket</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=pg')">Pittwater Golf Centre</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=qw')">Queenwood School Aquatics</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=qt')">QUT Sport</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=rs')">Rising Star Tennis Academy</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=rt')">RSTA Bungendore Park Tennis Club</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=sb')">School Bands Australia</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=stg')">St George Football Association</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=se')">State Equestrian Centre</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=sk')">Super Kids Sports</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=sut')">Sutherland Sharks Football Club</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=gt')">SwimTech Albury</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=bl')">The Biggest Little Swim School</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=tm')">Trish MS Research Foundation</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=pt')">Wentworth Tennis</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=bwa')">Western Australian Basketball Federation</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=wsw')">Western Sydney Wanderers FC</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=wl')">Westleigh Tennis Club</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=wuf')">WMG Football Club Ltd</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=xps')">XPS network</a>
+                            
+                          
+                            <a href="javascript:pop('client.cfm?client=ygc')">YoungGun Cricket</a>
+                        </td>
+                </ul>
+                <a href="#" class="direct">Direct Payments</a>
+            </div>
+        </div>
+
+        <div class="billing">
+            <h2>Billing</h2>
+        </div>
+    </div>
+
+  <script src="dasboard1.js"></script>
+</body>
+</html>

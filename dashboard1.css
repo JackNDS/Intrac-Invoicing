@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans');
+
+* {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+  overflow-x: hidden;
+  background: #f7f9f9;
+}
+
+.primary {
+  color: #6d66e5;
+}
+
+.container {
+  display: grid;
+  width: 97%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+}
+
+a {
+  color: #111;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 0.87rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+
+h5 {
+  font-size: 0.77rem;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.text-muted {
+  color: #7d8da1;
+}
+
+p {
+  color: #677483;
+}
+
+b {
+  color: #6d66e5;
+}
+
+nav {
+  height: 100vh;
+}
+
+nav .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+nav .logo {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+nav .logo img {
+  width: auto;
+  height: 2rem;
+}
+
+nav .close {
+  display: none;
+}
+
+nav .sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 1.8rem;
+}
+
+.sidebar h3 {
+  font-weight: 500;
+}
+
+nav .sidebar a span {
+  font-size: 1.6rem;
+  transition: all 300ms ease;
+}
+
+nav .sidebar a {
+  display: flex;
+  color: #677483;
+  margin-left: 1.5rem;
+  gap: 0.8rem;
+  align-items: center;
+  position: relative;
+  height: 3rem;
+  transition: all 300ms ease;
+}
+
+.bottom div {
+  color: #444;
+  margin-left: 1.6rem;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.bottom div b {
+  margin-left: 0.2rem;
+}
+
+nav .sidebar .bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+nav .sidebar a.active {
+  background: #ebdef0;
+  color: #6d66e5;
+  margin-left: 0;
+}
+
+nav .sidebar a.active:before {
+  content: '';
+  width: 6px;
+  height: 100%;
+  background: #6d66e5;
+}
+
+nav .sidebar a.active span {
+  color: #6d66e5;
+  margin-left: calc(0.5rem - 3px);
+}
+
+nav .sidebar a:hover {
+  color: #6d66e5;
+}
+
+nav .sidebar a:hover span {
+  margin-left: 1rem;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+main h1:first-child {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+main .insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+main .insights > div {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.09);
+  transition: all 300ms ease;
+}
+
+main .insights > div:hover {
+  box-shadow: none;
+}
+
+main .insights > div span {
+  background: #6d66e5;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+}
+
+main .insights > div.outstanding span {
+  background: #6d66e5;
+}
+
+main .insights > div.revenue span {
+  background: #6d66e5;
+}
+
+main .insights h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+main .insights h3 {
+  margin: 1rem 0 1rem;
+  font-size: 13px;
+}
+
+main .insights small {
+  margin-top: 1rem;
+  display: block;
+}
+
+main .current-invoices {
+  margin-top: 2rem;
+}
+
+main .current-invoices .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.search span {
+  font-size: 20px;
+}
+
+.search-input {
+  font-size: 13px;
+  color: #333;
+  margin-left: 14px;
+  outline: none;
+  border: none;
+  background: transparent;
+  flex: 1;
+}
+
+main .current-invoices h2 {
+  margin-bottom: 0.8rem;
+}
+
+main .current-invoices table {
+  background: #fff;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.09);
+  transition: all 300ms ease;
+}
+
+main .current-invoices table:hover {
+  box-shadow: none;
+}
+
+main table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid #e7e9e9;
+  color: #677483;
+  font-size: 12px;
+}
+
+main table tbody tr:last-child td {
+  border: none;
+}
+
+main .current-invoices a {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: #6d66e5;
+  font-size: 13px;
+}
+
+/* Right */
+.right {
+  margin-top: 1.4rem;
+}
+
+.right .top {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.right .top button {
+  display: none;
+}
+
+.right .top .profile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+}
+
+.right .current-clients {
+  margin-top: 1rem;
+}
+
+.right .current-clients h2 {
+  margin-bottom: 0.8rem;
+}
+
+.right .current-clients .clients {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.4rem;
+  text-align: left;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.09);
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  overflow-y: scroll;
+  height: 84vh;
+}
+
+.right .current-clients .clients a {
+  color: #677483;
+  transition: all 300ms ease;
+  display: flex;
+}
+
+.client-code {
+  width: 10%;
+  color: #6d66e5;
+}
+
+.right .current-clients .clients a:hover {
+  color: #6d66e5;
+}
+
+.right .current-clients .direct {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: #6d66e5;
+  font-size: 13px;
+}
+
+.billing {
+  position: absolute;
+  right: 0;
+  background: #fff;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  display: none;
+}
+
+.billing:before {
+  content: '';
+  width: 6px;
+  height: 100%;
+  background: #6d66e5;
+}
