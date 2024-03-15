@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intrac Invoicing</title>
+  <link rel="stylesheet" href="dataTables.dataTables.min.css"> <!--Naveen-->
   <link rel="stylesheet" href="dashboard1.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -13,7 +15,7 @@
         <nav>
             <div class="top">
                 <div class="logo">
-                    <img src="/company-logo.png" alt="">
+                    <img src="company-logo.png" alt="">
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-symbols-sharp">
@@ -173,15 +175,8 @@
             <div class="current-invoices">
                 <div class="top">
                     <div><h2>Current Invoices</h2></div>
-                    <div><form>
-                        <div class="search">
-                            <span class="search-icon material-symbols-sharp">search</span>
-                            <input type="search" class="search-input" placeholder="Search">
-                        </div>
-
-                    </form></div>
                 </div>
-                <table>
+                <table id="invoices_table"> <!--Naveen added id to this table -->
                     <thead>
                         <tr>
                             <th>Inv #</th>
@@ -190,6 +185,7 @@
                             <th>Due</th>
                             <th>Amount</th>
                             <th>Status</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -258,7 +254,6 @@
                         </tr>
                     </tbody>
                 </table>
-                <a href="#">Show All</a>
             </div>
         </main>
         <!-- End of Main-->
@@ -267,15 +262,26 @@
             <div class="current-clients">
                 <div class="top">
                 <h2>Clients</h2>
-                <div><form>
-                    <div class="search">
-                        <span class="search-icon material-symbols-sharp">search</span>
-                        <input type="search" class="search-input" placeholder="Search">
-                    </div>
-                </div>
+                
 
                 </form></div>
                 <ul class="clients">
+
+                    <!--Naveen start-->
+                    <table id="clients_table">
+                        <thead style="display: none">
+                            <tr>
+                                <th>Code</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <!--Naveen end-->
+
+
+                        <!-- Naveen comment all these --
   
                         <a href="javascript:pop('client.cfm?client=5s')">
                             <div class="client-code">5s</div>
@@ -509,6 +515,7 @@
                           
                             <a href="javascript:pop('client.cfm?client=ygc')">YoungGun Cricket</a>
                         </td>
+                        --Naveen end of commenting -->
                 </ul>
                 <a href="#" class="direct">Direct Payments</a>
             </div>
@@ -518,7 +525,71 @@
             <h2>Billing</h2>
         </div>
     </div>
+  
+  <!--Naveen code start-->
+  <script src="jquery.min.js"></script>
+  <script src="dataTables.min.js"></script>
+  <script type="text/javascript">
 
-  <script src="dasboard1.js"></script>
+    function init_data(){
+
+        $('#clients_table').DataTable().clear();
+        $('#invoices_table').DataTable().clear();
+
+        var clients_table_data = [];
+        var invoices_table_data = [];
+
+        var clients = ["5sports","Active8Kids","ARC @ UNSW","Ascham School Ltd","Blue Fin Swim School","Brisbane Roar Football Club","Broadbeach Inverloch Health Club","Camperdown Tennis","Careel Bay Tennis Club","Centennial Parklands - ES Marks","Centennial Parklands - MP Field","Coastal Environment Centre","Coogee Diggers","CrocStars Swim School","Cronulla Surfing Academy","Duck and Dive","East Gymnastics","Eastern Suburbs Hockey Club","Einsteinz Music","ESCPSNA","Flying Yogis","Football Victoria","Go Sports","Go Tennis","Goodwins Tennis Academy","Gymkidz","H2O Swimming Works","Hunters Hill Club","Immanuel Lutheran College","Inspire Tennis","Jensen's Tennis Centre","Kickeroos","Kincoppal - Rose Bay","Kory Babington Football Academy","Langham Hotels","Learn to Swim Victoria","Lennox Aquatic","Little Alfred Tennis Centre","Little Monsters Swim School","Love'n Deuce","Lyne Park Tennis Centre","Manly Surf School","Melbourne Golf Coaching","Mojosurf","Mojosurf Europe","Mojosurf Indonesia","Moore Park Golf","Music Bus","Neutral Bay Club","North Midlands Council","Northern Beaches Council","Oceanic Gymnastics Centre","Parklands Sports Centre","Penrith City Council","Per4orm Cricket","Pittwater Golf Centre","Queenwood School Aquatics","QUT Sport","Rising Star Tennis Academy","RSTA Bungendore Park Tennis Club","School Bands Australia","St George Football Association","State Equestrian Centre","Super Kids Sports","Sutherland Sharks Football Club","SwimTech Albury","The Biggest Little Swim School","Trish MS Research Foundation","Wentworth Tennis","Western Australian Basketball Federation","Western Sydney Wanderers FC","Westleigh Tennis Club","WMG Football Club Ltd","XPS network","YoungGun Cricket"];
+
+        var client_codes = ["5s","ak","arc","ah","bf","brf","bi","cc","cb","cp","cm","ce","cd","bb","ca","dd","eg","esh","em","en","fy","gof","gos","got","mv","gz","ho","hh","im","sg","je","ki","kc","kbf","lh","lv","la","li","lm","ld","lp","ms","mg","mj","me","mi","mp","mb","nb","nmc","pi","og","pl","pe","pfc","pg","qw","qt","rs","rt","sb","stg","se","sk","sut","gt","bl","tm","pt","bwa","wsw","wl","wuf","xps","ygc"];
+
+        var inv_start = 12847;
+
+        for (var i = 0; i < clients.length; i++) {
+            var row_obj = [];
+            row_obj.push(inv_start-i);
+            row_obj.push(clients[i]);
+            row_obj.push("March 1st 2024");
+            row_obj.push("March 15th 2024");
+            row_obj.push("$"+Math.round(10000*((Math.random() * (0.120 - 0.0200) + 0.0200)).toFixed(6)*100)/100);
+            row_obj.push("Pending");
+            row_obj.push('<div class="text-center">\
+                                        <a href="#" class="primary">Details</a>\
+                                     </div>'); 
+
+            invoices_table_data.push(row_obj);
+
+            var cli_obj = [];
+            cli_obj.push(client_codes[i]);
+            cli_obj.push(clients[i]);
+            clients_table_data.push(cli_obj);
+
+        }
+
+        $('#clients_table').DataTable().rows.add(clients_table_data).draw();
+        $('#invoices_table').DataTable().rows.add(invoices_table_data).draw();        
+    }
+
+    //DOM ready
+    $(document).ready(function() {
+        $('#clients_table').DataTable({
+            "order": [[ 1, "asc" ]],
+            "paging": false,
+            "deferRender": true
+        });   
+        $('#invoices_table').DataTable({
+            "order": [[ 0, "desc" ]],
+            "pageLength": 10,
+            "lengthMenu": [10, 25, 50],
+            "deferRender": true
+            /*
+            scrollY: '400px',
+            scrollCollapse: true,
+            paging: false*/
+        });        
+        init_data();
+    });      
+  </script>
+  <!--Naveen code end-->
 </body>
 </html>

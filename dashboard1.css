@@ -150,9 +150,7 @@ nav .sidebar a {
 }
 
 nav .sidebar .bottom {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  margin-top: 20px;
 }
 
 nav .sidebar a.active {
@@ -241,35 +239,12 @@ main .insights small {
 
 main .current-invoices {
   margin-top: 2rem;
+  width: auto;
 }
 
 main .current-invoices .top {
   display: flex;
   justify-content: space-between;
-}
-
-.search {
-  width: max-content;
-  display: flex;
-  align-items: center;
-  padding: 5px 14px;
-  border-radius: 20px;
-  background: #fff;
-  margin-bottom: 10px;
-}
-
-.search span {
-  font-size: 20px;
-}
-
-.search-input {
-  font-size: 13px;
-  color: #333;
-  margin-left: 14px;
-  outline: none;
-  border: none;
-  background: transparent;
-  flex: 1;
 }
 
 main .current-invoices h2 {
@@ -278,7 +253,7 @@ main .current-invoices h2 {
 
 main .current-invoices table {
   background: #fff;
-  width: 100%;
+  width: 100% !important;
   border-radius: 1rem;
   padding: 1.8rem;
   text-align: center;
@@ -294,7 +269,8 @@ main table tbody td {
   height: 2.8rem;
   border-bottom: 1px solid #e7e9e9;
   color: #677483;
-  font-size: 12px;
+  text-align: left;
+  font-size: 13px;
 }
 
 main table tbody tr:last-child td {
@@ -390,4 +366,18 @@ main .current-invoices a {
   width: 6px;
   height: 100%;
   background: #6d66e5;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 94%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+  nav .logo {
+    margin-left: 10px;
+  }
+  nav .logo img {
+    height: 20px;
+  }
 }
