@@ -10,7 +10,116 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="container">
+        <!-- Modal-->
+        <div class="modal-container">
+            <div class="modal-heading">
+                <div>Client</div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="client-details">
+                    <div class="detail">
+                        <div class="detail-left">Client Code:</div>
+                        <div class="detail-right">5s</div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-left">Type:</div>
+                        <div class="detail-right">Sports Centre</div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-left">Name:</div>
+                        <div class="detail-right">5sports</div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-left">Address:</div>
+                        <div class="detail-right">PO Box 2563
+                            Taren Point NSW 2229</div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-left">Contact:</div>
+                        <div class="detail-right">Anthony</div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-left">Email:</div>
+                        <div class="detail-right">ab@5sports.com.au</div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-left">Phone:</div>
+                        <div class="detail-right">0410 666 173</div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-left">Admin:</div>
+                        <div class="detail-right">Anthony Bennett</div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-left">System:</div>
+                        <div class="detail-right"><a href="https://5sports.intrac.com.au/sports/admin/">https://5sports.intrac.com.au/sports/admin/</a></div>
+                    </div>
+                </div>
+                <div class="recurring-items">
+                    <div class="detail">
+                        <div class="detail-left">Hosting Fee</div>
+                        <div class="detail-right">Standard</div>
+                        <div class="detail-right">50</div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-left">Transaction Fee</div>
+                        <div class="detail-right">Sports Centre Revenues</div>
+                        <div class="detail-right">0.008</div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail-left">SMS messages</div>
+                        <div class="detail-right"></div>
+                        <div class="detail-right">0.09</div>
+                    </div>
+                </div>
+                <div class="value">
+                    <div class="value-left">Value (last 12 months)</div>
+                    <div class="value-right">$12,590.23</div>
+                </div>
+            </div>
+        <div class="client-invoices">
+            <div class="client-table-heading">
+                <div>Invoice</div>
+                <div>Status</div>
+                <div>Created</div>
+                <div>Due/Paid</div>
+                <div>Amount</div>
+            </div>
+            <div class="client-table-row">
+                <div>1476</div>
+                <div>Paid</div>
+                <div>Dec 10th 2010</div>
+                <div>Dec 14th 2010</div>
+                <div>$550.00</div>
+            </div>
+            <div class="client-table-row">
+                <div>1476</div>
+                <div>Paid</div>
+                <div>Dec 10th 2010</div>
+                <div>Dec 14th 2010</div>
+                <div>$550.00</div>
+            </div>
+            <div class="client-table-row">
+                <div>1476</div>
+                <div>Paid</div>
+                <div>Dec 10th 2010</div>
+                <div>Dec 14th 2010</div>
+                <div>$550.00</div>
+            </div>
+        </div>
+            <div class="modal-btn">
+                <button>Add An Invoice</button>
+                <button>Create Current Invoice</button>
+                <button>Update Client Details</button>
+            </div>
+        </div>
         <!-- Navbar -->
         <nav>
             <div class="top">
@@ -30,7 +139,7 @@
                         </span>
                     <h3>Billing</h3>
                 </a>
-                <a href="#">
+                <a id="contacts" href="#">
                     <span class="material-symbols-sharp">
                         import_contacts
                         </span>
@@ -188,71 +297,6 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>12847</td>
-                            <td>YoungGun Cricket</td>
-                            <td>March 1st 2024</td>
-                            <td>March 15th 2024</td>
-                            <td>$3,415.24</td>
-                            <td>pending</td>
-                            <td><a href="#" class="primary">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>12845</td>
-                            <td>WMG Football Club Ltd</td>
-                            <td>March 1st 2024</td>
-                            <td>March 15th 2024</td>
-                            <td>$110.17</td>
-                            <td>pending</td>
-                            <td><a href="#" class="primary">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>12810</td>
-                            <td>Parklands Sports Centre</td>
-                            <td>March 1st 2024</td>
-                            <td>March 15th 2024</td>
-                            <td>$2,825.11</td>
-                            <td>pending</td>
-                            <td><a href="#" class="primary">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>12717</td>
-                            <td>Active8Kids</td>
-                            <td>March 1st 2024</td>
-                            <td>March 15th 2024</td>
-                            <td>$385.37</td>
-                            <td>pending</td>
-                            <td><a href="#" class="primary">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>12717</td>
-                            <td>Active8Kids</td>
-                            <td>March 1st 2024</td>
-                            <td>March 15th 2024</td>
-                            <td>$385.37</td>
-                            <td>pending</td>
-                            <td><a href="#" class="primary">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>12717</td>
-                            <td>Active8Kids</td>
-                            <td>March 1st 2024</td>
-                            <td>March 15th 2024</td>
-                            <td>$385.37</td>
-                            <td>pending</td>
-                            <td><a href="#" class="primary">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>12717</td>
-                            <td>Active8Kids</td>
-                            <td>March 1st 2024</td>
-                            <td>March 15th 2024</td>
-                            <td>$385.37</td>
-                            <td>pending</td>
-                            <td><a href="#" class="primary">Details</a></td>
-                        </tr>
-                    </tbody>
                 </table>
             </div>
         </main>
@@ -296,7 +340,7 @@
                             <div class="client-name">ARC @ UNSW</div></a>
                         
                       
-                        <a href="javascript:pop('client.cfm?client=ah')">Ascham School Ltd</a>
+                        <a href="javascript:pop('client.cfm?client=ah')">Ascham School Ldiv</a>
                         
                       
                         <a href="javascript:pop('client.cfm?client=bf')">Blue Fin Swim School</a>
@@ -399,7 +443,7 @@
                         
                       
                         <a href="javascript:pop('client.cfm?client=la')">Lennox Aquatic</a>
-                        <td>
+                        <div>
     
   
                             <a href="javascript:pop('client.cfm?client=li')">Little Alfred Tennis Centre</a>
@@ -507,14 +551,14 @@
                             <a href="javascript:pop('client.cfm?client=wl')">Westleigh Tennis Club</a>
                             
                           
-                            <a href="javascript:pop('client.cfm?client=wuf')">WMG Football Club Ltd</a>
+                            <a href="javascript:pop('client.cfm?client=wuf')">WMG Football Club Ldiv</a>
                             
                           
                             <a href="javascript:pop('client.cfm?client=xps')">XPS network</a>
                             
                           
                             <a href="javascript:pop('client.cfm?client=ygc')">YoungGun Cricket</a>
-                        </td>
+                        </div>
                         --Naveen end of commenting -->
                 </ul>
                 <a href="#" class="direct">Direct Payments</a>
@@ -525,6 +569,7 @@
             <h2>Billing</h2>
         </div>
     </div>
+    <script src="main.js"></script>
   
   <!--Naveen code start-->
   <script src="jquery.min.js"></script>
@@ -539,7 +584,7 @@
         var clients_table_data = [];
         var invoices_table_data = [];
 
-        var clients = ["5sports","Active8Kids","ARC @ UNSW","Ascham School Ltd","Blue Fin Swim School","Brisbane Roar Football Club","Broadbeach Inverloch Health Club","Camperdown Tennis","Careel Bay Tennis Club","Centennial Parklands - ES Marks","Centennial Parklands - MP Field","Coastal Environment Centre","Coogee Diggers","CrocStars Swim School","Cronulla Surfing Academy","Duck and Dive","East Gymnastics","Eastern Suburbs Hockey Club","Einsteinz Music","ESCPSNA","Flying Yogis","Football Victoria","Go Sports","Go Tennis","Goodwins Tennis Academy","Gymkidz","H2O Swimming Works","Hunters Hill Club","Immanuel Lutheran College","Inspire Tennis","Jensen's Tennis Centre","Kickeroos","Kincoppal - Rose Bay","Kory Babington Football Academy","Langham Hotels","Learn to Swim Victoria","Lennox Aquatic","Little Alfred Tennis Centre","Little Monsters Swim School","Love'n Deuce","Lyne Park Tennis Centre","Manly Surf School","Melbourne Golf Coaching","Mojosurf","Mojosurf Europe","Mojosurf Indonesia","Moore Park Golf","Music Bus","Neutral Bay Club","North Midlands Council","Northern Beaches Council","Oceanic Gymnastics Centre","Parklands Sports Centre","Penrith City Council","Per4orm Cricket","Pittwater Golf Centre","Queenwood School Aquatics","QUT Sport","Rising Star Tennis Academy","RSTA Bungendore Park Tennis Club","School Bands Australia","St George Football Association","State Equestrian Centre","Super Kids Sports","Sutherland Sharks Football Club","SwimTech Albury","The Biggest Little Swim School","Trish MS Research Foundation","Wentworth Tennis","Western Australian Basketball Federation","Western Sydney Wanderers FC","Westleigh Tennis Club","WMG Football Club Ltd","XPS network","YoungGun Cricket"];
+        var clients = ["5sports","Active8Kids","ARC @ UNSW","Ascham School Ldiv","Blue Fin Swim School","Brisbane Roar Football Club","Broadbeach Inverloch Health Club","Camperdown Tennis","Careel Bay Tennis Club","Centennial Parklands - ES Marks","Centennial Parklands - MP Field","Coastal Environment Centre","Coogee Diggers","CrocStars Swim School","Cronulla Surfing Academy","Duck and Dive","East Gymnastics","Eastern Suburbs Hockey Club","Einsteinz Music","ESCPSNA","Flying Yogis","Football Victoria","Go Sports","Go Tennis","Goodwins Tennis Academy","Gymkidz","H2O Swimming Works","Hunters Hill Club","Immanuel Lutheran College","Inspire Tennis","Jensen's Tennis Centre","Kickeroos","Kincoppal - Rose Bay","Kory Babington Football Academy","Langham Hotels","Learn to Swim Victoria","Lennox Aquatic","Little Alfred Tennis Centre","Little Monsters Swim School","Love'n Deuce","Lyne Park Tennis Centre","Manly Surf School","Melbourne Golf Coaching","Mojosurf","Mojosurf Europe","Mojosurf Indonesia","Moore Park Golf","Music Bus","Neutral Bay Club","North Midlands Council","Northern Beaches Council","Oceanic Gymnastics Centre","Parklands Sports Centre","Penrith City Council","Per4orm Cricket","Pittwater Golf Centre","Queenwood School Aquatics","QUT Sport","Rising Star Tennis Academy","RSTA Bungendore Park Tennis Club","School Bands Australia","St George Football Association","State Equestrian Centre","Super Kids Sports","Sutherland Sharks Football Club","SwimTech Albury","The Biggest Little Swim School","Trish MS Research Foundation","Wentworth Tennis","Western Australian Basketball Federation","Western Sydney Wanderers FC","Westleigh Tennis Club","WMG Football Club Ldiv","XPS network","YoungGun Cricket"];
 
         var client_codes = ["5s","ak","arc","ah","bf","brf","bi","cc","cb","cp","cm","ce","cd","bb","ca","dd","eg","esh","em","en","fy","gof","gos","got","mv","gz","ho","hh","im","sg","je","ki","kc","kbf","lh","lv","la","li","lm","ld","lp","ms","mg","mj","me","mi","mp","mb","nb","nmc","pi","og","pl","pe","pfc","pg","qw","qt","rs","rt","sb","stg","se","sk","sut","gt","bl","tm","pt","bwa","wsw","wl","wuf","xps","ygc"];
 
