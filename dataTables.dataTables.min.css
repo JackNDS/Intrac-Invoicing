@@ -637,6 +637,7 @@ div.dt-container .dt-search input {
   background-color: transparent;
   color: inherit;
   margin-left: 3px;
+  text-align: left;
 }
 
 div.dt-container .dt-search label {

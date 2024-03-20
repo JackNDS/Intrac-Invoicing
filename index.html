@@ -14,110 +14,809 @@
     <div class="container">
         <!-- Modal-->
         <div class="modal-container">
-            <div class="modal-heading">
-                <div>Client</div>
-                <div class="close" id="close-btn">
-                    <span class="material-symbols-sharp">
-                        close
-                    </span>
-                </div>
-            </div>
-            <div class="modal-content">
-                <div class="client-details">
-                    <div class="detail">
-                        <div class="detail-left">Client Code:</div>
-                        <div class="detail-right">5s</div>
-                    </div>
-                    <div class="detail">
-                        <div class="detail-left">Type:</div>
-                        <div class="detail-right">Sports Centre</div>
-                    </div>
-                    <div class="detail">
-                        <div class="detail-left">Name:</div>
-                        <div class="detail-right">5sports</div>
-                    </div>
-                    <div class="detail">
-                        <div class="detail-left">Address:</div>
-                        <div class="detail-right">PO Box 2563
-                            Taren Point NSW 2229</div>
-                    </div>
-                    <div class="detail">
-                        <div class="detail-left">Contact:</div>
-                        <div class="detail-right">Anthony</div>
-                    </div>
-                    <div class="detail">
-                        <div class="detail-left">Email:</div>
-                        <div class="detail-right">ab@5sports.com.au</div>
-                    </div>
-                    <div class="detail">
-                        <div class="detail-left">Phone:</div>
-                        <div class="detail-right">0410 666 173</div>
-                    </div>
-                    <div class="detail">
-                        <div class="detail-left">Admin:</div>
-                        <div class="detail-right">Anthony Bennett</div>
-                    </div>
-                    <div class="detail">
-                        <div class="detail-left">System:</div>
-                        <div class="detail-right"><a href="https://5sports.intrac.com.au/sports/admin/">https://5sports.intrac.com.au/sports/admin/</a></div>
+            <div id="right_modal" class="modal-container open">
+                <div class="modal-heading">
+                    <div>Client</div>
+                    <div class="close" id="close-btn">
+                        <span class="material-symbols-sharp">
+                            close
+                        </span>
                     </div>
                 </div>
-                <div class="recurring-items">
-                    <div class="detail">
-                        <div class="detail-left">Hosting Fee</div>
-                        <div class="detail-right">Standard</div>
-                        <div class="detail-right">50</div>
-                    </div>
-                    <div class="detail">
-                        <div class="detail-left">Transaction Fee</div>
-                        <div class="detail-right">Sports Centre Revenues</div>
-                        <div class="detail-right">0.008</div>
-                    </div>
-                    <div class="detail">
-                        <div class="detail-left">SMS messages</div>
-                        <div class="detail-right"></div>
-                        <div class="detail-right">0.09</div>
-                    </div>
-                </div>
-                <div class="value">
-                    <div class="value-left">Value (last 12 months)</div>
-                    <div class="value-right">$12,590.23</div>
-                </div>
-            </div>
-        <div class="client-invoices">
-            <div class="client-table-heading">
-                <div>Invoice</div>
-                <div>Status</div>
-                <div>Created</div>
-                <div>Due/Paid</div>
-                <div>Amount</div>
-            </div>
-            <div class="client-table-row">
-                <div>1476</div>
-                <div>Paid</div>
-                <div>Dec 10th 2010</div>
-                <div>Dec 14th 2010</div>
-                <div>$550.00</div>
-            </div>
-            <div class="client-table-row">
-                <div>1476</div>
-                <div>Paid</div>
-                <div>Dec 10th 2010</div>
-                <div>Dec 14th 2010</div>
-                <div>$550.00</div>
-            </div>
-            <div class="client-table-row">
-                <div>1476</div>
-                <div>Paid</div>
-                <div>Dec 10th 2010</div>
-                <div>Dec 14th 2010</div>
-                <div>$550.00</div>
+                <div class="modal-body">
+                    <div id="client_view" class="modal-content">
+                        <div class="client-details">
+                            <div class="detail">
+                                <div class="detail-left">Client Code:</div>
+                                <div class="detail-right" id="cl_client">ak</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Type:</div>
+                                <div class="detail-right" id="cl_type">School</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Name:</div>
+                                <div class="detail-right" id="cl_name">Active8Kids</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Address:</div>
+                                <div class="detail-right" id="cl_addr">1/70 Bronte Rd
+            Bondi Junction NSW 2022</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Contact:</div>
+                                <div class="detail-right" id="cl_contact">Sara</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Email:</div>
+                                <div class="detail-right" id="cl_email"><a href="mailto:info@active8kids.com.au">info@active8kids.com.au</a></div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Phone:</div>
+                                <div class="detail-right" id="cl_phone">0452500455</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Admin:</div>
+                                <div class="detail-right" id="cl_admin"><a href="mailto:Sara Tredler<info@active8kids.com.au>">Sara Tredler<info@active8kids.com.au></info@active8kids.com.au></a></div>
+                            </div>
+                            <div class="detail" id="cli_ccy_div" style="display: none;">
+                                <div class="detail-left">Currency:</div>
+                                <div class="detail-right" id="cl_ccy"></div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">System:</div>
+                                <div class="detail-right" id="cl_system"><a href="#">https://ak.intrac.com.au/admin/</a></div>
+                            </div>
+                            <div class="detail" id="cli_direct" style="">
+                                <div class="detail-left">Payment:</div>
+                                <div class="detail-right">Client is set up for direct payments</div>
+                            </div>                    
+                        </div>
+                        <div class="recurring-items" id="cl_recur">
+                            <div class="detail">
+                                <div class="detail-left">Hosting fee</div> 
+                                <div class="detail-right">Standard</div>
+                                <div class="detail-right">50</div>
+                            </div>
+                            <div class="detail"> 
+                                <div class="detail-left">Transaction fee</div> 
+                                <div class="detail-right">Tennis bookings</div>
+                                <div class="detail-right">0.008</div> 
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left"></div>
+                                <div class="detail-right">Minimum</div>
+                                <div class="detail-right">150</div>
+                            </div>                
+                            <div class="detail"> 
+                                <div class="detail-left">SMS messages</div>
+                                <div class="detail-right"></div>
+                                <div class="detail-right">0.09</div>  
+                            </div>
+                        </div>
+                        <div class="modal-btn">
+                            <button>Add Recurring Item</button>
+                        </div>
+                        <div class="value">
+                            <div class="value-left">Value (last 12 months)</div>
+                            <div class="value-right" id="cl_yrtotal">$8,928.87</div>
+                        </div>
+                        <div class="client-invoices">
+                            <table id="client_invoices_table" style="width: 100%">
+                                <thead>
+                                    <tr class="client-table-heading">
+                                        <th>Invoice</th>
+                                        <th>Status</th>
+                                        <th>Created</th>
+                                        <th>Due/Paid</th>
+                                        <th>Amount</th>
+                                    </tr>                        
+                                </thead>
+                                <tbody>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11182</a></td>
+                                        <td>Paid</td>
+                                        <td>1 Dec 2022</td>
+                                        <td>13 Dec 2022</td>
+                                        <td>$312.92</td>
+                                    </tr>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11247</a></td>
+                                        <td>Paid</td>
+                                        <td>1 Jan 2023</td>
+                                        <td>18 Jan 2023</td>
+                                        <td>$519.74</td>
+                                    </tr>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11312</a></td>
+                                        <td>Paid</td>
+                                        <td>1 Feb 2023</td>
+                                        <td>1 Feb 2023</td>
+                                        <td>$577.51</td>
+                                    </tr>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11378</a></td>
+                                        <td>Paid</td>
+                                        <td>1 Mar 2023</td>
+                                        <td>21 Mar 2023</td>
+                                        <td>$488.94</td>
+                                    </tr>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11442</a></td>
+                                        <td>Paid</td>
+                                        <td>1 Apr 2023</td>
+                                        <td>2 Apr 2023</td>
+                                        <td>$1,069.00</td>
+                                    </tr>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11507</a></td>  
+                                        <td>Paid</td>  <td>1 May 2023</td><td>17 May 2023</td>   <td>$597.21</td>  
+                                    </tr>
+                                    <tr class="client-table-row"> 
+                                        <td><a href="#" class="primary cli_inv_id">11572</a></td>  <td>Paid</td>  <td>1 Jun 2023</td><td>21 Jun 2023</td>   <td>$508.58</td>  
+                                    </tr>
+                                    <tr class="client-table-row"> 
+                                        <td><a href="#" class="primary cli_inv_id">11637</a></td>  <td>Paid</td>  <td>1 Jul 2023</td><td>19 Jul 2023</td>   <td>$1,433.79</td></tr><tr class="client-table-row"> <td><a href="#" class="primary cli_inv_id">11702</a></td>  <td>Paid</td>  <td>1 Aug 2023</td><td>3 Nov 2023</td><td>$480.10</td>
+                                    </tr>
+                                    <tr class="client-table-row"> 
+                                        <td><a href="#" class="primary cli_inv_id">11767</a></td>  <td>Paid</td>  <td>1 Sep 2023</td><td>3 Nov 2023</td><td>$423.30</td>  </tr><tr class="client-table-row"> <td><a href="#" class="primary cli_inv_id">11831</a></td>  <td>Paid</td>  <td>2 Oct 2023</td><td>3 Nov 2023</td><td>$1,323.09</td>
+                                    </tr>
+                                    <tr class="client-table-row"> 
+                                        <td><a href="#" class="primary cli_inv_id">12404</a></td>  <td>Paid</td>  <td>1 Nov 2023</td><td>3 Nov 2023</td><td>$332.67</td>  </tr><tr class="client-table-row"> <td><a href="#" class="primary cli_inv_id">12479</a></td>  <td>Paid</td>  <td>1 Dec 2023</td><td>2 Dec 2023</td><td>$506.07</td>  
+                                    </tr>
+                                    <tr class="client-table-row"> 
+                                        <td><a href="#" class="primary cli_inv_id">12556</a></td>  <td>Paid</td>  <td>1 Jan 2024</td><td>2 Jan 2024</td><td>$1,241.55</td></tr><tr class="client-table-row"> <td><a href="#" class="primary cli_inv_id">12633</a></td>  <td>Paid</td>  <td>1 Feb 2024</td><td>2 Feb 2024</td><td>$628.14</td>
+                                    </tr>
+                                    <tr class="client-table-row"> <td><a href="#" class="primary cli_inv_id">12717</a></td>  <td>Pending</td>   <td>1 Mar 2024</td><td>15 Mar 2024</td>   <td>$385.37</td>  </tr><tr class="client-table-row"><td colspan="4" >Lifetime total:</td>  <td style="grid-column: 5">$10,827.97</td>                         
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-btn">
+                            <button>Add An Invoice</button>
+                            <button>Create Current Invoice</button>
+                            <button id="update-btn">Update Client Details</button>
+                        </div>                    
+                    </div> <!--end of client_view-->
+                    <hr color="red" style="height: 2px; margin-top: 20px;">
+                    <div id="invoice_view" class="modal-content" style="margin-top: 20px;">
+                        <div class="client-details">
+                            <div class="detail">
+                                <div class="detail-left">Client:</div>
+                                <div class="detail-right" id="in_client">Centennial Parklands - MP Field</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Invoice:</div>
+                                <div class="detail-right" id="in_invoice">11514</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Created:</div>
+                                <div class="detail-right" id="in_created">1 May 2023</div>
+                            </div>
+                            <div class="detail in-due-div">
+                                <div class="detail-left">Due:</div>
+                                <div class="detail-right">
+                                    <div class="flex-align-center">
+                                        <span id="in_due">31 May 2023</span>
+                                        <span class="material-symbols-sharp span-buttons">
+                                        edit_square
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail in-due-edit-div">
+                                <div class="detail-left">Due:</div>
+                                <div class="detail-right">
+                                    <div class="flex-align-center">
+                                        <input type="text" id="in_due_date" name="in_due_date" value="31 Jun 2024" autocomplete="off">
+                                        <span class="material-symbols-sharp span-buttons">
+                                        done
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div class="detail">
+                                <div class="detail-left">Paid:</div>
+                                <div class="detail-right" id="in_paid">31 Jul 2023</div>
+                            </div>                  
+                        </div>
+                        <div class="recurring-items" id="in_items">
+                            <div class="detail fivecol">
+                                <div class="detail-right"><a href="#" class="primary">41472</a></div>
+                                <div class="detail-right">1</div>
+                                <div class="detail-right">Hosting fee<br>May 2023</div>
+                                <div class="detail-right">50</div>
+                                <div class="detail-right">$50.00</div>
+                            </div>
+                            <div class="detail fivecol">
+                                <div class="detail-right"><a href="#" class="primary">41473</a></div>
+                                <div class="detail-right">1</div>
+                                <div class="detail-right">Transaction fee<br>Minimum fee based on revenues of $0<br>April 2023</div>
+                                <div class="detail-right">150</div>
+                                <div class="detail-right">$150.00</div>
+                            </div>
+                            <div class="detail fivecol">
+                                <div class="detail-right"><a href="#" class="primary">41474</a></div>
+                                <div class="detail-right">1</div>
+                                <div class="detail-right">Payment gateway hosting fee<br>May 2023</div>
+                                <div class="detail-right">20</div>
+                                <div class="detail-right">$20.00</div>
+                            </div>  
+                            <div class="detail fivecol">
+                                <div class="detail-right"></div>
+                                <div class="detail-right"></div>
+                                <div class="detail-right"></div>
+                                <div class="detail-right">GST:</div>
+                                <div class="detail-right">$22.00</div>
+                            </div>      
+                            <div class="detail fivecol">
+                                <div class="detail-right"></div>
+                                <div class="detail-right"></div>
+                                <div class="detail-right"></div>
+                                <div class="detail-right">Total:</div>
+                                <div class="detail-right">$242.00</div>
+                            </div> 
+                        </div>
+                        <div class="modal-btn">
+                            <button>Record Payment</button>
+                            <button>Display Invoice</button>
+                            <button>Renew Invoice</button>
+                        </div>                    
+                    </div><!--end of invoice_view-->
+                    <hr color="red" style="height: 2px; margin-top: 20px;">
+                    <div id="item_view" class="modal-content" style="margin-top: 20px;">
+                        <div class="client-details">
+                            <div class="detail">
+                                <div class="detail-left">Client:</div>
+                                <div class="detail-right" id="itm_client">Centennial Parklands - MP Field</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Invoice:</div>
+                                <div class="detail-right" id="itm_invoice">11514</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Created:</div>
+                                <div class="detail-right" id="itm_created">1 May 2023</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Due:</div>
+                                <div class="detail-right" id="itm_due">31 May 2023</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Item:</div>
+                                <div class="detail-right" id="itm_item">41472</div>
+                            </div> 
+                            <div class="detail">
+                                <div class="detail-left">Quantity:</div>
+                                <div class="detail-right">
+                                    <input type="text" id="itm_quantity" name="itm_quantity" value="1" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Description:</div>
+                                <div class="detail-right">
+                                    <textarea id="itm_description" name="itm_description" cols="44" rows="4">Hosting fee March 2024</textarea>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Unit:</div>
+                                <div class="detail-right">
+                                    <input type="text" id="itm_unit" name="itm_unit" value="50" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-btn">
+                            <button>Save</button>
+                            <button>Delete this item</button>
+                        </div>                    
+                    </div><!--end of item_view-->
+                    <hr color="red" style="height: 2px; margin-top: 20px;">
+                    <div id="bill_view" class="modal-content" style="margin-top: 20px;">
+                        <div class="recurring-items">    
+                            <div class="detail">
+                                <div class="detail-right"><a href="#" class="primary">&lt;--</a></div>
+                                <div class="detail-right month">March 2024</div>
+                                <div class="detail-right"><a href="#" class="primary">--&gt;</a></div>
+                            </div> 
+                        </div>
+                        <div class="client-invoices">
+                            <table id="bill_table" style="width: 100%">
+                                <thead>
+                                    <tr class="client-table-heading fourcol">
+                                        <th>Date</th>
+                                        <th>Invoice</th>
+                                        <th>Client</th>
+                                        <th>Amount</th>
+                                    </tr>                        
+                                </thead>
+                                <tbody>
+                                    <tr class="client-table-row fourcol">
+                                        <td>1 Mar 2024</td>
+                                        <td>12716</td>
+                                        <td>5sports</td>
+                                        <td>$636.43</td>
+                                    </tr>
+                                    <tr class="client-table-row fourcol">
+                                        <td>10 Mar 2024</td>
+                                        <td>12717</td>
+                                        <td>Active8Kids</td>
+                                        <td>$350.34</td>
+                                    </tr>
+                                    <tr class="client-table-row fourcol">
+                                        <td>1 Mar 2024</td>
+                                        <td>12718</td>
+                                        <td>ARC @ UNSW</td>
+                                        <td>$900.00</td>
+                                    </tr>
+                                    <tr class="client-table-row fourcol">
+                                        <td>10 Mar 2024</td>
+                                        <td>12719</td>
+                                        <td>Ascham School Ltd</td>
+                                        <td>$50.00</td>
+                                    </tr>
+                                    <tr class="client-table-row fourcol">
+                                        <td>1 Mar 2024</td>
+                                        <td>12720</td>
+                                        <td>Blue Fin Swim School</td>
+                                        <td>$500.72</td>
+                                    </tr>
+                                    <tr class="client-table-row fourcol">
+                                        <td>Total:</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>$2500.72</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                    
+                        <div class="modal-btn">
+                            <button>Value By Client</button>
+                            <button>Billing Summary Report</button>
+                            <button>Billing Annual Summary</button>
+                        </div>                    
+                    </div><!--end of bill_view-->
+                    <hr color="red" style="height: 2px; margin-top: 20px;">
+                    <div id="reminder_view" class="modal-content" style="margin-top: 20px;">
+                        <div class="client-details">
+                            <div class="detail">
+                                <div class="detail-left">Type of client:</div>
+                                <div class="detail-right">
+                                    <select name="rem_client_type" id="rem_client_type">
+                                        <option value="Tennis">Tennis</option>
+                                        <option value="Surf School">Surf School</option>
+                                        <option value="Swim School">Swim School</option>
+                                        <option value="School">School</option>
+                                        <option value="Trip">Trip</option>
+                                        <option value="Sports Centre">Sports Centre</option>
+                                    </select>  
+                                </div>
+                            </div>                
+                        </div>
+                        <div class="recurring-items" id="rem_items">
+                            <div class="detail remind">
+                                <div class="detail-right"><input type="checkbox" name="client" value="5s" checked=""></div>
+                                <div class="detail-right">5sports</div>
+                                <div class="detail-right">12716 15 Mar 2024 $700.07</div>
+                            </div>
+                            <div class="detail remind">
+                                <div class="detail-right"><input type="checkbox" name="client" value="cb" checked=""></div>
+                                <div class="detail-right">Careel Bay Tennis Club</div>
+                                <div class="detail-right">12724 1 Mar 2024 $93.67</div>
+                            </div>                        
+                            <div class="detail remind">
+                                <div class="detail-right"><input type="checkbox" name="client" value="bwa" checked=""></div>
+                                <div class="detail-right">Western Australian Basketball Federation</div>
+                                <div class="detail-right">12626 15 Jan 2024 $770.00<br>12703 5 Feb 2024 $770.00<br>12842 15 Mar 2024 $12770.00</div>
+                            </div>                        
+                        </div>
+                        <div class="modal-btn">
+                            <button>Send Reminders</button>
+                        </div>                    
+                    </div><!--end of reminder_view-->                
+                </div>    
             </div>
         </div>
-            <div class="modal-btn">
-                <button>Add An Invoice</button>
-                <button>Create Current Invoice</button>
-                <button>Update Client Details</button>
+        <div class="modal-container modal2">
+            <div id="right_modal" class="modal-container open">
+                <div class="modal-heading">
+                    <div>Client</div>
+                    <div class="close" id="close-btn2">
+                        <span class="material-symbols-sharp">
+                            close
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="client_view" class="modal-content">
+                        <div class="client-details">
+                            <div class="detail">
+                                <div class="detail-left">Client Code:</div>
+                                <div class="detail-right" id="cl_client">ak</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Type:</div>
+                                <div class="detail-right" id="cl_type">School</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Name:</div>
+                                <div class="detail-right" id="cl_name">Active8Kids</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Address:</div>
+                                <div class="detail-right" id="cl_addr">1/70 Bronte Rd
+            Bondi Junction NSW 2022</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Contact:</div>
+                                <div class="detail-right" id="cl_contact">Sara</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Email:</div>
+                                <div class="detail-right" id="cl_email"><a href="mailto:info@active8kids.com.au">info@active8kids.com.au</a></div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Phone:</div>
+                                <div class="detail-right" id="cl_phone">0452500455</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Admin:</div>
+                                <div class="detail-right" id="cl_admin"><a href="mailto:Sara Tredler<info@active8kids.com.au>">Sara Tredler<info@active8kids.com.au></info@active8kids.com.au></a></div>
+                            </div>
+                            <div class="detail" id="cli_ccy_div" style="display: none;">
+                                <div class="detail-left">Currency:</div>
+                                <div class="detail-right" id="cl_ccy"></div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">System:</div>
+                                <div class="detail-right" id="cl_system"><a href="#">https://ak.intrac.com.au/admin/</a></div>
+                            </div>
+                            <div class="detail" id="cli_direct" style="">
+                                <div class="detail-left">Payment:</div>
+                                <div class="detail-right">Client is set up for direct payments</div>
+                            </div>                    
+                        </div>
+                        <div class="recurring-items" id="cl_recur">
+                            <div class="detail">
+                                <div class="detail-left">Hosting fee</div> 
+                                <div class="detail-right">Standard</div>
+                                <div class="detail-right">50</div>
+                            </div>
+                            <div class="detail"> 
+                                <div class="detail-left">Transaction fee</div> 
+                                <div class="detail-right">Tennis bookings</div>
+                                <div class="detail-right">0.008</div> 
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left"></div>
+                                <div class="detail-right">Minimum</div>
+                                <div class="detail-right">150</div>
+                            </div>                
+                            <div class="detail"> 
+                                <div class="detail-left">SMS messages</div>
+                                <div class="detail-right"></div>
+                                <div class="detail-right">0.09</div>  
+                            </div>
+                        </div>
+                        <div class="modal-btn">
+                            <button>Add Recurring Item</button>
+                        </div>
+                        <div class="value">
+                            <div class="value-left">Value (last 12 months)</div>
+                            <div class="value-right" id="cl_yrtotal">$8,928.87</div>
+                        </div>
+                        <div class="client-invoices">
+                            <table id="client_invoices_table" style="width: 100%">
+                                <thead>
+                                    <tr class="client-table-heading">
+                                        <th>Invoice</th>
+                                        <th>Status</th>
+                                        <th>Created</th>
+                                        <th>Due/Paid</th>
+                                        <th>Amount</th>
+                                    </tr>                        
+                                </thead>
+                                <tbody>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11182</a></td>
+                                        <td>Paid</td>
+                                        <td>1 Dec 2022</td>
+                                        <td>13 Dec 2022</td>
+                                        <td>$312.92</td>
+                                    </tr>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11247</a></td>
+                                        <td>Paid</td>
+                                        <td>1 Jan 2023</td>
+                                        <td>18 Jan 2023</td>
+                                        <td>$519.74</td>
+                                    </tr>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11312</a></td>
+                                        <td>Paid</td>
+                                        <td>1 Feb 2023</td>
+                                        <td>1 Feb 2023</td>
+                                        <td>$577.51</td>
+                                    </tr>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11378</a></td>
+                                        <td>Paid</td>
+                                        <td>1 Mar 2023</td>
+                                        <td>21 Mar 2023</td>
+                                        <td>$488.94</td>
+                                    </tr>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11442</a></td>
+                                        <td>Paid</td>
+                                        <td>1 Apr 2023</td>
+                                        <td>2 Apr 2023</td>
+                                        <td>$1,069.00</td>
+                                    </tr>
+                                    <tr class="client-table-row">
+                                        <td><a href="#" class="primary cli_inv_id">11507</a></td>  
+                                        <td>Paid</td>  <td>1 May 2023</td><td>17 May 2023</td>   <td>$597.21</td>  
+                                    </tr>
+                                    <tr class="client-table-row"> 
+                                        <td><a href="#" class="primary cli_inv_id">11572</a></td>  <td>Paid</td>  <td>1 Jun 2023</td><td>21 Jun 2023</td>   <td>$508.58</td>  
+                                    </tr>
+                                    <tr class="client-table-row"> 
+                                        <td><a href="#" class="primary cli_inv_id">11637</a></td>  <td>Paid</td>  <td>1 Jul 2023</td><td>19 Jul 2023</td>   <td>$1,433.79</td></tr><tr class="client-table-row"> <td><a href="#" class="primary cli_inv_id">11702</a></td>  <td>Paid</td>  <td>1 Aug 2023</td><td>3 Nov 2023</td><td>$480.10</td>
+                                    </tr>
+                                    <tr class="client-table-row"> 
+                                        <td><a href="#" class="primary cli_inv_id">11767</a></td>  <td>Paid</td>  <td>1 Sep 2023</td><td>3 Nov 2023</td><td>$423.30</td>  </tr><tr class="client-table-row"> <td><a href="#" class="primary cli_inv_id">11831</a></td>  <td>Paid</td>  <td>2 Oct 2023</td><td>3 Nov 2023</td><td>$1,323.09</td>
+                                    </tr>
+                                    <tr class="client-table-row"> 
+                                        <td><a href="#" class="primary cli_inv_id">12404</a></td>  <td>Paid</td>  <td>1 Nov 2023</td><td>3 Nov 2023</td><td>$332.67</td>  </tr><tr class="client-table-row"> <td><a href="#" class="primary cli_inv_id">12479</a></td>  <td>Paid</td>  <td>1 Dec 2023</td><td>2 Dec 2023</td><td>$506.07</td>  
+                                    </tr>
+                                    <tr class="client-table-row"> 
+                                        <td><a href="#" class="primary cli_inv_id">12556</a></td>  <td>Paid</td>  <td>1 Jan 2024</td><td>2 Jan 2024</td><td>$1,241.55</td></tr><tr class="client-table-row"> <td><a href="#" class="primary cli_inv_id">12633</a></td>  <td>Paid</td>  <td>1 Feb 2024</td><td>2 Feb 2024</td><td>$628.14</td>
+                                    </tr>
+                                    <tr class="client-table-row"> <td><a href="#" class="primary cli_inv_id">12717</a></td>  <td>Pending</td>   <td>1 Mar 2024</td><td>15 Mar 2024</td>   <td>$385.37</td>  </tr><tr class="client-table-row"><td colspan="4" >Lifetime total:</td>  <td style="grid-column: 5">$10,827.97</td>                         
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-btn">
+                            <button>Add An Invoice</button>
+                            <button>Create Current Invoice</button>
+                            <button>Update Client Details</button>
+                        </div>                    
+                    </div> <!--end of client_view-->
+                    <hr color="red" style="height: 2px; margin-top: 20px;">
+                    <div id="invoice_view" class="modal-content" style="margin-top: 20px;">
+                        <div class="client-details">
+                            <div class="detail">
+                                <div class="detail-left">Client:</div>
+                                <div class="detail-right" id="in_client">Centennial Parklands - MP Field</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Invoice:</div>
+                                <div class="detail-right" id="in_invoice">11514</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Created:</div>
+                                <div class="detail-right" id="in_created">1 May 2023</div>
+                            </div>
+                            <div class="detail in-due-div">
+                                <div class="detail-left">Due:</div>
+                                <div class="detail-right">
+                                    <div class="flex-align-center">
+                                        <span id="in_due">31 May 2023</span>
+                                        <span class="material-symbols-sharp span-buttons">
+                                        edit_square
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail in-due-edit-div">
+                                <div class="detail-left">Due:</div>
+                                <div class="detail-right">
+                                    <div class="flex-align-center">
+                                        <input type="text" id="in_due_date" name="in_due_date" value="31 Jun 2024" autocomplete="off">
+                                        <span class="material-symbols-sharp span-buttons">
+                                        done
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div class="detail">
+                                <div class="detail-left">Paid:</div>
+                                <div class="detail-right" id="in_paid">31 Jul 2023</div>
+                            </div>                  
+                        </div>
+                        <div class="recurring-items" id="in_items">
+                            <div class="detail fivecol">
+                                <div class="detail-right"><a href="#" class="primary">41472</a></div>
+                                <div class="detail-right">1</div>
+                                <div class="detail-right">Hosting fee<br>May 2023</div>
+                                <div class="detail-right">50</div>
+                                <div class="detail-right">$50.00</div>
+                            </div>
+                            <div class="detail fivecol">
+                                <div class="detail-right"><a href="#" class="primary">41473</a></div>
+                                <div class="detail-right">1</div>
+                                <div class="detail-right">Transaction fee<br>Minimum fee based on revenues of $0<br>April 2023</div>
+                                <div class="detail-right">150</div>
+                                <div class="detail-right">$150.00</div>
+                            </div>
+                            <div class="detail fivecol">
+                                <div class="detail-right"><a href="#" class="primary">41474</a></div>
+                                <div class="detail-right">1</div>
+                                <div class="detail-right">Payment gateway hosting fee<br>May 2023</div>
+                                <div class="detail-right">20</div>
+                                <div class="detail-right">$20.00</div>
+                            </div>  
+                            <div class="detail fivecol">
+                                <div class="detail-right"></div>
+                                <div class="detail-right"></div>
+                                <div class="detail-right"></div>
+                                <div class="detail-right">GST:</div>
+                                <div class="detail-right">$22.00</div>
+                            </div>      
+                            <div class="detail fivecol">
+                                <div class="detail-right"></div>
+                                <div class="detail-right"></div>
+                                <div class="detail-right"></div>
+                                <div class="detail-right">Total:</div>
+                                <div class="detail-right">$242.00</div>
+                            </div> 
+                        </div>
+                        <div class="modal-btn">
+                            <button>Record Payment</button>
+                            <button>Display Invoice</button>
+                            <button>Renew Invoice</button>
+                        </div>                    
+                    </div><!--end of invoice_view-->
+                    <hr color="red" style="height: 2px; margin-top: 20px;">
+                    <div id="item_view" class="modal-content" style="margin-top: 20px;">
+                        <div class="client-details">
+                            <div class="detail">
+                                <div class="detail-left">Client:</div>
+                                <div class="detail-right" id="itm_client">Centennial Parklands - MP Field</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Invoice:</div>
+                                <div class="detail-right" id="itm_invoice">11514</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Created:</div>
+                                <div class="detail-right" id="itm_created">1 May 2023</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Due:</div>
+                                <div class="detail-right" id="itm_due">31 May 2023</div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Item:</div>
+                                <div class="detail-right" id="itm_item">41472</div>
+                            </div> 
+                            <div class="detail">
+                                <div class="detail-left">Quantity:</div>
+                                <div class="detail-right">
+                                    <input type="text" id="itm_quantity" name="itm_quantity" value="1" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Description:</div>
+                                <div class="detail-right">
+                                    <textarea id="itm_description" name="itm_description" cols="44" rows="4">Hosting fee March 2024</textarea>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-left">Unit:</div>
+                                <div class="detail-right">
+                                    <input type="text" id="itm_unit" name="itm_unit" value="50" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-btn">
+                            <button>Save</button>
+                            <button>Delete this item</button>
+                        </div>                    
+                    </div><!--end of item_view-->
+                    <hr color="red" style="height: 2px; margin-top: 20px;">
+                    <div id="bill_view" class="modal-content" style="margin-top: 20px;">
+                        <div class="recurring-items">    
+                            <div class="detail">
+                                <div class="detail-right"><a href="#" class="primary">&lt;--</a></div>
+                                <div class="detail-right month">March 2024</div>
+                                <div class="detail-right"><a href="#" class="primary">--&gt;</a></div>
+                            </div> 
+                        </div>
+                        <div class="client-invoices">
+                            <table id="bill_table" style="width: 100%">
+                                <thead>
+                                    <tr class="client-table-heading fourcol">
+                                        <th>Date</th>
+                                        <th>Invoice</th>
+                                        <th>Client</th>
+                                        <th>Amount</th>
+                                    </tr>                        
+                                </thead>
+                                <tbody>
+                                    <tr class="client-table-row fourcol">
+                                        <td>1 Mar 2024</td>
+                                        <td>12716</td>
+                                        <td>5sports</td>
+                                        <td>$636.43</td>
+                                    </tr>
+                                    <tr class="client-table-row fourcol">
+                                        <td>10 Mar 2024</td>
+                                        <td>12717</td>
+                                        <td>Active8Kids</td>
+                                        <td>$350.34</td>
+                                    </tr>
+                                    <tr class="client-table-row fourcol">
+                                        <td>1 Mar 2024</td>
+                                        <td>12718</td>
+                                        <td>ARC @ UNSW</td>
+                                        <td>$900.00</td>
+                                    </tr>
+                                    <tr class="client-table-row fourcol">
+                                        <td>10 Mar 2024</td>
+                                        <td>12719</td>
+                                        <td>Ascham School Ltd</td>
+                                        <td>$50.00</td>
+                                    </tr>
+                                    <tr class="client-table-row fourcol">
+                                        <td>1 Mar 2024</td>
+                                        <td>12720</td>
+                                        <td>Blue Fin Swim School</td>
+                                        <td>$500.72</td>
+                                    </tr>
+                                    <tr class="client-table-row fourcol">
+                                        <td>Total:</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>$2500.72</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                    
+                        <div class="modal-btn">
+                            <button>Value By Client</button>
+                            <button>Billing Summary Report</button>
+                            <button>Billing Annual Summary</button>
+                        </div>                    
+                    </div><!--end of bill_view-->
+                    <hr color="red" style="height: 2px; margin-top: 20px;">
+                    <div id="reminder_view" class="modal-content" style="margin-top: 20px;">
+                        <div class="client-details">
+                            <div class="detail">
+                                <div class="detail-left">Type of client:</div>
+                                <div class="detail-right">
+                                    <select name="rem_client_type" id="rem_client_type">
+                                        <option value="Tennis">Tennis</option>
+                                        <option value="Surf School">Surf School</option>
+                                        <option value="Swim School">Swim School</option>
+                                        <option value="School">School</option>
+                                        <option value="Trip">Trip</option>
+                                        <option value="Sports Centre">Sports Centre</option>
+                                    </select>  
+                                </div>
+                            </div>                
+                        </div>
+                        <div class="recurring-items" id="rem_items">
+                            <div class="detail remind">
+                                <div class="detail-right"><input type="checkbox" name="client" value="5s" checked=""></div>
+                                <div class="detail-right">5sports</div>
+                                <div class="detail-right">12716 15 Mar 2024 $700.07</div>
+                            </div>
+                            <div class="detail remind">
+                                <div class="detail-right"><input type="checkbox" name="client" value="cb" checked=""></div>
+                                <div class="detail-right">Careel Bay Tennis Club</div>
+                                <div class="detail-right">12724 1 Mar 2024 $93.67</div>
+                            </div>                        
+                            <div class="detail remind">
+                                <div class="detail-right"><input type="checkbox" name="client" value="bwa" checked=""></div>
+                                <div class="detail-right">Western Australian Basketball Federation</div>
+                                <div class="detail-right">12626 15 Jan 2024 $770.00<br>12703 5 Feb 2024 $770.00<br>12842 15 Mar 2024 $12770.00</div>
+                            </div>                        
+                        </div>
+                        <div class="modal-btn">
+                            <button>Send Reminders</button>
+                        </div>                    
+                    </div><!--end of reminder_view-->                
+                </div>    
             </div>
         </div>
         <!-- Navbar -->
@@ -220,7 +919,7 @@
                 </a>
                 
                 <div class="bottom">
-                <div>Logged in as <b>Jack</b></div>    
+                <div class="logged-in">Logged in as <b>Jack</b></div>    
                 <a href="#">
                     <span class="material-symbols-sharp">
                         password

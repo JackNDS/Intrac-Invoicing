@@ -382,8 +382,24 @@ main .current-invoices a {
   transform: translateX(1000px);
 }
 
+.modal-container.modal2 {
+  height: 100vh;
+  position: absolute;
+  background: #fff;
+  width: 50vw;
+  z-index: 7;
+  right: 0;
+  padding: 20px 40px;
+  transition: all 600ms ease;
+  transform: translateX(1000px);
+}
+
 .modal-container.open {
   transform: translateX(0);
+}
+
+.modal2.open {
+  transform: translateX(-50vw) !important;
 }
 
 .no-scroll {
@@ -395,7 +411,7 @@ main .current-invoices a {
   background: #000;
   width: 100vw;
   height: 100vh;
-  z-index: 9;
+  z-index: 6;
   opacity: 60%;
   display: none;
 }
@@ -418,6 +434,15 @@ main .current-invoices a {
   border-radius: 4px;
   left: 16.5px;
 }
+.modal2 .modal-heading:before {
+  content: '';
+  width: 11px;
+  height: 32px;
+  background: #555;
+  position: absolute;
+  border-radius: 4px;
+  left: 16.5px;
+}
 
 .modal-heading span {
   cursor: pointer;
@@ -429,20 +454,54 @@ main .current-invoices a {
 
 .client-details {
   font-size: 15px;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 .client-details .detail {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  padding-bottom: 2px;
   border-bottom: 1px solid #edf2f7;
 }
 
+.recurring-items .detail div:last-child {
+  text-align: right;
+}
+
 .recurring-items .detail {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin-bottom: 10px;
+  text-align: left;
+}
+
+.client-table-heading.fourcol {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.client-table-heading th:last-child {
+  text-align: right;
+}
+
+.client-table-row.fourcol {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.client-table-row td:last-child {
+  text-align: right;
+}
+
+.recurring-items .detail.fivecol {
+  grid-template-columns: 1fr 1fr 300px 1fr 1fr;
+}
+
+.recurring-items .detail.remind {
+  grid-template-columns: 60px 1fr 1fr;
+}
+
+.month {
+  text-align: center;
 }
 
 .detail-left {
@@ -472,16 +531,15 @@ main .current-invoices a {
 }
 
 .modal-btn {
-  padding-top: 30px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
 .modal-btn button {
   padding: 14px 16px;
   border-radius: 8px;
-  margin-left: 8px;
   cursor: pointer;
   background: #6d66e5;
   color: #fff;
@@ -502,16 +560,80 @@ main .current-invoices a {
 }
 
 .client-table-heading {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: left;
   font-weight: 900;
 }
 
 .client-table-row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin-top: 6px;
   color: #64748b;
+}
+
+.modal-container.open {
+  transform: translateX(0);
+  overflow-y: scroll;
+}
+
+input,
+textarea {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: right;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Reset default browser styles */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #ced4da;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  padding: 8px 40px 8px 10px;
+  font-size: 14px;
+  font-family: 'Noto Sans', sans-serif;
+  max-width: 300px; /* Adjust as needed */
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+/* Hover effect */
+select:hover {
+  border-color: #adb5bd;
+}
+
+/* Focus effect */
+select:focus {
+  outline: none;
+  border-color: #4d90fe;
+}
+
+textarea:focus,
+input[type='text']:focus {
+  outline: 1px solid #4d90fe;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* MEDIA QUERIES */
@@ -525,5 +647,23 @@ main .current-invoices a {
   }
   nav .logo img {
     height: 20px;
+  }
+  nav .sidebar h3 {
+    display: none;
+  }
+  .logged-in {
+    display: none;
+  }
+  nav .sidebar a {
+    width: 4.5rem;
+  }
+
+  nav .sidebar a:last-child {
+    position: relative;
+  }
+  main .insights {
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: auto;
   }
 }

@@ -55,7 +55,15 @@ button:hover {
   background-color: #453dd1;
 }
 
-@media (max-width: 300px) {
+#error {
+  color: #6d66e5;
+  font-size: 14px;
+  max-width: 250px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+@media (max-width: 375px) {
   form {
     width: 200px;
   }
