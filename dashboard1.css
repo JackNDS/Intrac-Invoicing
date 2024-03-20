@@ -394,10 +394,6 @@ main .current-invoices a {
   transform: translateX(1000px);
 }
 
-.modal-container.open {
-  transform: translateX(0);
-}
-
 .modal2.open {
   transform: translateX(-50vw) !important;
 }
